@@ -5,6 +5,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 
 @Entity
 @Table(name = "Asdos")
@@ -18,23 +19,27 @@ public class Asdos {
 //    private int id;
 
     @Id
-    @Column(name = "kode", updatable = false)
-    private int kode;
+    @Column(name = "asdos_code", updatable = false)
+    private String code;
 
     @Column(name = "asdos_name")
     private String name;
 
-    @Column(name = "kelas_asdos")
-    private String kelas;
+    @Column(name = "asdos_class")
+    private String asdosClass;
 
-    @Column(name= "jam_kerja_asdos")
-    private LocalDateTime jamKerja;
+    @Column(name= "office_hour_open")
+    private LocalTime OfficeHourOpen;
 
-    public Asdos(int kode, String name, String kelas, LocalDateTime jamKerja){
-        this.kode = kode;
+    @Column(name= "office_hour_close")
+    private LocalTime officeHourClose;
+
+    public Asdos(String code, String name, String asdosClass, LocalTime OfficeHourOpen, LocalTime officeHourClose){
+        this.code = code;
         this.name = name;
-        this.kelas = kelas;
-        this.jamKerja = jamKerja;
+        this.asdosClass = asdosClass;
+        this.OfficeHourOpen = OfficeHourOpen;
+        this.officeHourClose = officeHourClose;
     }
 
 }
