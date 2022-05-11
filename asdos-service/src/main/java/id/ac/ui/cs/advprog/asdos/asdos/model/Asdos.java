@@ -12,12 +12,6 @@ import java.time.LocalTime;
 @Data
 @NoArgsConstructor
 public class Asdos {
-
-//    @Id
-//    @GeneratedValue(strategy = GenerationType.AUTO)
-//    @Column(name = "id", updatable = false)
-//    private int id;
-
     @Id
     @Column(name = "asdos_code", updatable = false)
     private String code;
@@ -29,16 +23,16 @@ public class Asdos {
     private String asdosClass;
 
     @Column(name= "office_hour_open")
-    private LocalTime OfficeHourOpen;
+    private LocalTime officeHourOpen;
 
     @Column(name= "office_hour_close")
     private LocalTime officeHourClose;
 
-    public Asdos(String code, String name, String asdosClass, LocalTime OfficeHourOpen, LocalTime officeHourClose){
+    public Asdos(String code, String name, String asdosClass, LocalTime officeHourOpen, LocalTime officeHourClose){
         this.code = code;
         this.name = name;
         this.asdosClass = asdosClass;
-        this.OfficeHourOpen = OfficeHourOpen;
+        this.officeHourOpen = officeHourOpen;
         this.officeHourClose = officeHourClose;
     }
 

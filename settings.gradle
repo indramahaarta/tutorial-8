@@ -9,5 +9,5 @@
 
 rootProject.name = 'tutorial-8'
 include('asdos-service')
-//include('booking-service')
-//include('booking-service')
+include('booking-service')
+include('service-registry')

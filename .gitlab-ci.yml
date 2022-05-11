@@ -15,14 +15,3 @@ build:
     paths:
       - build/libs/*.jar
     expire_in: 1 day
-
-test:
-  stage: test
-  script:
-    - export SPRING_PROFILES_ACTIVE=test
-    - gradle check --stacktrace
-    - cat build/reports/jacoco/test/html/index.html | grep -o '<tfoot>.*</tfoot>'
-  artifacts:
-    paths:
-      - build/reports/jacoco/*
-    expire_in: 1 day

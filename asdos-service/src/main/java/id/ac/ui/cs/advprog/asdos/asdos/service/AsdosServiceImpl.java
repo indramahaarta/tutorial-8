@@ -7,7 +7,6 @@ import id.ac.ui.cs.advprog.asdos.asdos.model.dto.BookingRequestDTO;
 import id.ac.ui.cs.advprog.asdos.asdos.repository.AsdosRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.reactive.function.client.WebClient;
 
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
@@ -36,7 +35,6 @@ public class AsdosServiceImpl implements AsdosService{
 
     @Override
     public BookingApprovalDTO validateAsdosBooking(BookingRequestDTO bookingRequest) {
-
         Asdos asdos = getAsdosByCode(bookingRequest.getAsdosCode());
         LocalTime requestedTime = bookingRequest.getRequestedTime();
         BookingApprovalDTO bookingApprovalDTO = new BookingApprovalDTO();
