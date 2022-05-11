@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
-import java.time.LocalDateTime;
 import java.time.LocalTime;
 
 @Component
@@ -17,39 +16,39 @@ public class AsdosInitializer {
     @PostConstruct
     public void init(){
         Asdos asdos1 = new Asdos(
-                "RE",
-                "Rheznandya Erwanto",
+                "AD",
+                "Andi",
                 "A",
                 LocalTime.of(10,00,00),
                 LocalTime.of(16,0,0)
         );
         Asdos asdos2 = new Asdos(
-                "STF",
-                "Samuel Tupa Febriam",
+                "BD",
+                "Budi",
                 "A",
                 LocalTime.of(11,30,00),
                 LocalTime.of(16,0,0)
         );
         Asdos asdos3 = new Asdos(
-                "LF",
-                "Muhammad Luthfi Fahlevi",
-                "A",
+                "CT",
+                "Cakti",
+                "B",
                 LocalTime.of(18,30,00),
                 LocalTime.of(22,0,0)
         );
         Asdos asdos4 = new Asdos(
-                "AN",
-                "Andrika Novrialdi",
-                "A",
+                "DN",
+                "Doni",
+                "B",
                 LocalTime.of(9,0,00),
                 LocalTime.of(22,0,0)
         );
         Asdos asdos5 = new Asdos(
-                "PAL",
-                "Nofaldi Atmam",
+                "ER",
+                "Elrumi",
                 "C",
-                LocalTime.of(9,0,00),
-                LocalTime.of(22,0,0)
+                LocalTime.of(18,30,00),
+                LocalTime.of(23,30,0)
         );
         asdosRepository.save(asdos1);
         asdosRepository.save(asdos2);
